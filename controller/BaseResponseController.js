@@ -1,4 +1,4 @@
-const BaseResponse = (code = 200, status = 'Data Found', data) => {
+const BaseResponse = (code, status, data) => {
   return {
     code: code,
     status: status,
