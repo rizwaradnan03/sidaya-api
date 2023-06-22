@@ -8,7 +8,7 @@ const getAll = async (req, res) => {
         if (data === null) {
             return res.status(400).json({ code: 400, message: 'Data Not Found' })
         }
-        const response_data = BaseResponse(data)
+        const response_data = BaseResponse(200,'Data Found',data)
 
         res.json(response_data)
     } catch (error) {
