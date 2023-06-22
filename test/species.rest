@@ -1,4 +1,4 @@
-GET http://localhost:4000/api/species/
+GET http://localhost:3000/api/species/
 
 ###
 GET http://localhost:4000/api/species/9f1964bd-9045-4bf9-9f61-583a9fbbdfbd
