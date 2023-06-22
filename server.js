@@ -1,5 +1,5 @@
 const express = require('express')
-// const cors = require('cors')
+const cors = require('cors')
 
 const PeriodeRoutes = require('./routes/PeriodeRoutes')
 const SpeciesRoutes = require('./routes/SpeciesRoutes')
@@ -13,7 +13,7 @@ const ActivityTemplateDetailRoutes = require('./routes/ActivityTemplateDetailRou
 
 const app = express()
 
-// app.use(cors())
+app.use(cors())
 app.use(express.json())
 
 app.use('/', (req,res) => {
