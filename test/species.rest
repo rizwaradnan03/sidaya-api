@@ -1,0 +1,23 @@
+GET http://localhost:4000/api/species/
+
+###
+GET http://localhost:4000/api/species/9f1964bd-9045-4bf9-9f61-583a9fbbdfbd
+
+###
+POST http://localhost:4000/api/species/
+Content-Type: application/json
+
+{
+    "name": "Species 1"
+}
+
+###
+PATCH http://localhost:4000/api/species/9f1964bd-9045-4bf9-9f61-583a9fbbdfbd
+Content-Type: application/json
+
+{
+    "name": "Hehehehaw"
+}
+
+###
+DELETE http://localhost:4000/api/species/9f1964bd-9045-4bf9-9f61-583a9fbbdfbd

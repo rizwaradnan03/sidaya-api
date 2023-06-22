@@ -1,0 +1,24 @@
+GET https://sidaya-api-production.up.railway.app/api/supply
+
+###
+GET http://localhost:4000/api/periode/9f1964bd-9045-4bf9-9f61-583a9fbbdfbd
+
+###
+POST https://sidaya.up.railway.app/api/supply
+Content-Type: application/json
+
+{
+    "name": "Pisang",
+    "uom": "Buah"
+}
+
+###
+PATCH http://localhost:4000/api/periode/9f1964bd-9045-4bf9-9f61-583a9fbbdfbd
+Content-Type: application/json
+
+{
+    "name": "Hehehehaw"
+}
+
+###
+DELETE http://localhost:4000/api/periode/9f1964bd-9045-4bf9-9f61-583a9fbbdfbd
