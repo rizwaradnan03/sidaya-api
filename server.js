@@ -16,9 +16,9 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.use('/', (req,res) => {
-    // res.json({message: 'halo geys'})
-})
+// app.use('/', (req,res) => {
+//     res.json({message: 'halo geys'})
+// })
 
 app.use('/api/periode', PeriodeRoutes)
 app.use('/api/species', SpeciesRoutes)
@@ -30,6 +30,6 @@ app.use('/api/activity-template', ActivityTemplateRoutes)
 app.use('/api/activity-supply-template', ActivitySupplyTemplateRoutes)
 app.use('/api/activity-template-detail', ActivityTemplateDetailRoutes)
 
-app.listen(9001,"0.0.0.0",() => {
+app.listen(3000, () => {
     console.log('Succesfully Connected')
 })
