@@ -34,7 +34,7 @@ const ActivityTemplateDetail = db.define("activity_template_detail", {
 module.exports = ActivityTemplateDetail;
 
 // generate table
-// (async () => {
-//     await db.sync();
-//     console.log('Success Migrate')
-// })();
+(async () => {
+    await db.sync();
+    console.log('Success Migrate')
+})();

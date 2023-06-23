@@ -40,7 +40,7 @@ Activity.belongsTo(Periode, { foreignKey: 'periode_id' })
 module.exports = Activity;
 
 // generate table
-// (async () => {
-//     await db.sync();
-//     console.log('Success Migrate')
-// })();
+(async () => {
+    await db.sync();
+    console.log('Success Migrate')
+})();

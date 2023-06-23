@@ -51,7 +51,7 @@ Areas.belongsTo(ActivityTemplate, {
 module.exports = Areas;
 
 // generate table
-// (async () => {
-//     await db.sync();
-//     console.log('Success Migrate')
-// })();
+(async () => {
+    await db.sync();
+    console.log('Success Migrate')
+})();

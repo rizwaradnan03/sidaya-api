@@ -1,6 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 
+const UserRoutes = require('./routes/UserRoutes')
 const PeriodeRoutes = require('./routes/PeriodeRoutes')
 const SpeciesRoutes = require('./routes/SpeciesRoutes')
 const SupplyRoutes = require('./routes/SupplyRoutes')
@@ -20,6 +21,7 @@ app.use(express.json())
 //     res.json({message: 'halo geys'})
 // })
 
+app.use('/api/user', UserRoutes)
 app.use('/api/periode', PeriodeRoutes)
 app.use('/api/species', SpeciesRoutes)
 app.use('/api/supply', SupplyRoutes)

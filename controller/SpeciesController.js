@@ -5,7 +5,7 @@ const getAll = async (req, res) => {
     try {
         const data = await Species.findAll()
 
-        if (data === null) {
+        if (!data) {
             return res.status(400).json({ code: 400, message: 'Data Not Found' })
         }
         const response_data = BaseResponse(200,'Data Found',data)
@@ -24,7 +24,7 @@ const getOne = async (req, res) => {
             },
         })
 
-        if (data === null) {
+        if (!data) {
             return res.status(400).json({ code: 400, message: 'Data Not Found' })
         }
         const response_data = BaseResponse(200,'Data Found',data)

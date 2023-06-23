@@ -5,7 +5,7 @@ const getAll = async (req, res) => {
     try {
         const data = await ActivitySupplyTemplate.findAll()
 
-        if (data === null) {
+        if (!data) {
             return res.status(400).json({ code: 400, message: 'Data Not Found' })
         }
         const response_data = BaseResponse(200,'Data Found',data)
@@ -24,7 +24,7 @@ const getOne = async (req, res) => {
             },
         })
 
-        if (data === null) {
+        if (!data) {
             return res.status(400).json({ code: 400, message: 'Data Not Found' })
         }
         const response_data = BaseResponse(200,'Data Found',data)
@@ -36,7 +36,7 @@ const getOne = async (req, res) => {
 
 const createData = async (req, res) => {
     try {
-        if (req.body === null) {
+        if (!req.body) {
             return res.status(400).json({ code: 400, message: 'Data Not Found' })
         }
 

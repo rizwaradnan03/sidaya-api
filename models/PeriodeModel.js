@@ -21,7 +21,7 @@ const Periode = db.define("periode", {
 module.exports = Periode;
 
 // generate table
-// (async () => {
-//     await db.sync();
-//     console.log('Success Migrate')
-// })();
+(async () => {
+    await db.sync();
+    console.log('Success Migrate')
+})();

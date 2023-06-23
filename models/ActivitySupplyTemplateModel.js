@@ -42,7 +42,7 @@ ActivitySupplyTemplate.belongsTo(Supply, { foreignKey: 'supply_id' })
 module.exports = ActivitySupplyTemplate;
 
 // generate table
-// (async () => {
-//     await db.sync();
-//     console.log('Success Migrate')
-// })();
+(async () => {
+    await db.sync();
+    console.log('Success Migrate')
+})();
