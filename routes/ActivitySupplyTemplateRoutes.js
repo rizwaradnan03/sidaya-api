@@ -4,6 +4,7 @@ const {
     getOne,
     createData,
     updateData,
+    deleteData,
 } = require('../controller/ActivitySupplyTemplateController')
 
 const router = express.Router()
@@ -19,5 +20,8 @@ router.post('/', createData)
 
 //update data
 router.patch('/:id', updateData)
+
+//delete data
+router.delete('/:id', deleteData)
 
 module.exports = router
