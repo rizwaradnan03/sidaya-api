@@ -65,7 +65,9 @@ const updateData = async (req, res) => {
 const deleteData = async (req, res) => {
     try {
         const data = await ActivityTemplate.destroy({
-            id: req.params.id
+            where: {
+                id: req.params.id
+            }
         })
         const response_data = BaseResponse(201,'Success Delete',data)
         res.json(response_data)
