@@ -10,7 +10,7 @@ const {
 
 const router = express.Router()
 
-//get all
+//get all/
 router.get('/view', getView)
 
 //get all
