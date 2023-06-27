@@ -4,7 +4,7 @@ const BaseResponse = require('./BaseResponseController')
 
 const getView = async (req,res) => {
     try {
-        const query_data = await db.query("select area.name as name, species.name as species, area.capacity as capacity, activity_template.name as activity_template from area inner join species on species.id = area.species_id inner join activity_template on activity_template.id = area.activity_template_id")
+        const query_data = await db.query("select area.id as id, area.name as name, species.name as species, area.capacity as capacity, activity_template.name as activity_template from area inner join species on species.id = area.species_id inner join activity_template on activity_template.id = area.activity_template_id")
         const data = query_data[0]
 
         if (!data) {
