@@ -1,5 +1,6 @@
 const express = require('express')
 const {
+    getView,
     getAll,
     getOne,
     createData,
@@ -11,6 +12,9 @@ const router = express.Router()
 
 //get all
 router.get('/', getAll)
+
+//get all
+router.get('/view', getView)
 
 //get one
 router.get('/:id', getOne)

@@ -1,5 +1,22 @@
+const db = require('../config/Database')
 const Activity = require('../models/ActivityModel')
 const BaseResponse = require('./BaseResponseController')
+
+const getView = async (req,res) => {
+    try {
+        const query_data = await db.query("select activity.description as description, activity.due_date as due_date, activity.related_area, periode.name from activity inner join periode on periode.id = activity.periode_id")
+        const data = query_data[0]
+
+        if (!data) {
+            return res.status(400).json({ code: 400, message: 'Data Not Found.' })
+        }
+        const response_data = BaseResponse(200,'Data Found',data)
+
+        res.json(response_data)
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 const getAll = async (req, res) => {
     try {
@@ -77,6 +94,7 @@ const deleteData = async (req, res) => {
 }
 
 module.exports = {
+    getView,
     getAll,
     getOne,
     createData,
