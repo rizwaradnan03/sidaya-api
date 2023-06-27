@@ -1,6 +1,21 @@
 const Areas = require('../models/AreasModel')
 const BaseResponse = require('./BaseResponseController')
 
+const getView = async (req,res) => {
+    try {
+        const data = await Areas.query("select area.name, species.name, area.capacity, activiy_template.name  from area inner join species on species.id = area.species_id inner join acitivy_template on activity_template.id = area.activity_template_id")
+        
+        if (!data) {
+            return res.status(400).json({ code: 400, message: 'Data Not Found' })
+        }
+        const response_data = BaseResponse(200,'Data Found',data)
+
+        res.json(response_data)
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 const getAll = async (req, res) => {
     try {
         const data = await Areas.findAll()
@@ -77,6 +92,7 @@ const deleteData = async (req, res) => {
 }
 
 module.exports = {
+    getView,
     getAll,
     getOne,
     createData,

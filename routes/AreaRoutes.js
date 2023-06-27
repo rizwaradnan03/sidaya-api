@@ -1,5 +1,6 @@
 const express = require('express')
 const {
+    getView,
     getAll,
     getOne,
     createData,
@@ -8,6 +9,9 @@ const {
 } = require('../controller/AreasController')
 
 const router = express.Router()
+
+//get all
+router.get('/view', getView)
 
 //get all
 router.get('/', getAll)
