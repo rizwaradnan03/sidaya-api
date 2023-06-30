@@ -19,7 +19,7 @@ const ActivityTemplateDetail = db.define("activity_template_detail", {
         allowNull: false
     },
     time: {
-        type: DataTypes.DATE,
+        type: DataTypes.STRING,
         allowNull: false
     },
     is_global_activity: {

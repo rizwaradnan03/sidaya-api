@@ -16,7 +16,7 @@ const Activity = db.define("activity", {
         allowNull: false
     },
     due_date: {
-        type: DataTypes.DATE,
+        type: DataTypes.DATE(6),
         allowNull: false
     },
     related_area: {
